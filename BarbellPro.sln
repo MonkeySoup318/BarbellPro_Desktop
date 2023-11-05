@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BarbellPro.Application", "BarbellPro.Application\BarbellPro.Application.csproj", "{1918F493-4884-4B1B-966F-D56933D972FB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1918F493-4884-4B1B-966F-D56933D972FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1918F493-4884-4B1B-966F-D56933D972FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1918F493-4884-4B1B-966F-D56933D972FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1918F493-4884-4B1B-966F-D56933D972FB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F864E0FF-353B-4582-A7F3-EA4D6741E312}
+	EndGlobalSection
+EndGlobal
+

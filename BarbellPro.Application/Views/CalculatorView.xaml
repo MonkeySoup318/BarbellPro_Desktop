@@ -1,0 +1,203 @@
+﻿<UserControl
+    x:Class="BarbellPro.Application.Views.CalculatorView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:System="clr-namespace:System;assembly=mscorlib"
+    xmlns:cstm="clr-namespace:BarbellPro.Application.Views.CustomUIElements"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:enm="clr-namespace:BarbellPro.Application.Models.Enums"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="clr-namespace:BarbellPro.Application.ViewModels"
+    d:DesignHeight="700"
+    d:DesignWidth="1000"
+    mc:Ignorable="d">
+
+    <UserControl.DataContext>
+        <viewModels:CalculatorViewModel />
+    </UserControl.DataContext>
+
+    <UserControl.Resources>
+        <ObjectDataProvider
+            x:Key="getGenderFromEnum"
+            MethodName="GetValues"
+            ObjectType="{x:Type System:Enum}">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="enm:Gender" />
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+    </UserControl.Resources>
+
+    <!--  Main Grid  -->
+    <Grid Background="#FFF9F9F9">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="20" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="20" />
+        </Grid.RowDefinitions>
+
+        <!--  Header  -->
+        <TextBlock
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="4"
+            Padding="5,20,5,20"
+            VerticalAlignment="Center"
+            Background="DarkGreen"
+            FontSize="20"
+            FontWeight="Bold"
+            Foreground="#FFF9F9F9"
+            Text="Weight Plate Calculator For Olympic Weightlifting"
+            TextAlignment="Center"
+            TextWrapping="Wrap" />
+
+        <!--  Inner Grid left side  -->
+        <Grid Grid.Row="1" Grid.Column="1">
+            <DockPanel Margin="0,20,20,20" Background="#d9d9e3">
+                <StackPanel
+                    Width="580"
+                    Height="500"
+                    Orientation="Horizontal">
+                    <Grid Width="580" Height="500">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="74" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <!-- Image Empty Barbell -->
+                        <Image
+                            Grid.ColumnSpan="2"
+                            Width="580"
+                            Height="280"
+                            HorizontalAlignment="Left"
+                            Source="{Binding EmptyBarbellImage}"
+                            Stretch="None" />
+
+                        <StackPanel
+                            Grid.Column="1"
+                            VerticalAlignment="Center"
+                            Orientation="Horizontal">
+                            <ItemsControl ItemsSource="{Binding ImageCollection}">
+                                <ItemsControl.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <StackPanel Orientation="Horizontal" />
+                                    </ItemsPanelTemplate>
+                                </ItemsControl.ItemsPanel>
+                            </ItemsControl>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+            </DockPanel>
+        </Grid>
+
+        <!--  Inner Grid right side  -->
+        <Grid Grid.Row="1" Grid.Column="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+
+            <!--  Gender  -->
+            <TextBlock
+                Grid.Row="1"
+                Grid.Column="0"
+                Margin="0,20,0,20"
+                FontWeight="Bold"
+                Text="Select Gender:" />
+
+            <ComboBox
+                Name="cbGenderSelect"
+                Grid.Row="1"
+                Grid.Column="1"
+                Margin="0,20,0,20"
+                ItemsSource="{Binding Source={StaticResource getGenderFromEnum}, UpdateSourceTrigger=PropertyChanged}"
+                SelectedValue="{Binding SelectedGender, UpdateSourceTrigger=PropertyChanged}" />
+
+
+            <!--  Weight  -->
+            <TextBlock
+                Grid.Row="2"
+                Grid.Column="0"
+                FontWeight="Bold"
+                Text="Weight (in kg):" />
+
+            <cstm:UserInputWeightTB
+                Grid.Row="2"
+                Grid.Column="1"
+                Text="{Binding InputWeight, UpdateSourceTrigger=PropertyChanged}" />
+
+
+            <!--  Has Tournament Clip  -->
+            <TextBlock
+                Grid.Row="3"
+                Grid.Column="0"
+                FontWeight="Bold"
+                Text="Add tournament clip:" />
+
+            <CheckBox
+                Name="chHasClip"
+                Grid.Row="3"
+                Grid.Column="1"
+                HorizontalAlignment="Right"
+                IsChecked="{Binding HasClip, UpdateSourceTrigger=PropertyChanged}" />
+
+            <!--  Calculate Weight Plates  -->
+            <Button
+                Name="btnCalculate"
+                Grid.Row="4"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Command="{Binding CalculateCommand}"
+                Content="Calculate Weight Plates"
+                FontWeight="Bold" />
+
+            <!--  Reset Weights Plates  -->
+            <Button
+                Name="btnReset"
+                Grid.Row="5"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Command="{Binding ResetViewCommand}"
+                Content="Reset" />
+
+            <!--<TextBlock Grid.Column="0" Grid.Row="6" Text="SelectedGender: " />
+            <TextBlock Grid.Column="0" Grid.Row="7" Text="InputWeight: " />
+            <TextBlock Grid.Column="0" Grid.Row="8" Text="HasClip: " />
+            <TextBlock Grid.Column="0" Grid.Row="9" Text="MinWeight: " />
+            <TextBlock Grid.Column="0" Grid.Row="10" Text="MaxWeight: " />
+            <TextBlock Grid.Column="0" Grid.Row="11" Text="AlgoWeight: " />
+            <TextBlock Grid.Column="0" Grid.Row="12" Text="WeightPlates: " />
+
+
+
+            <TextBlock Grid.Column="1" Grid.Row="6" Text="{Binding SelectedGender}" />
+            <TextBlock Grid.Column="1" Grid.Row="7" Text="{Binding InputWeight}" />
+            <TextBlock Grid.Column="1" Grid.Row="8" Text="{Binding HasClip}" />
+            <TextBlock Grid.Column="1" Grid.Row="9" Text="{Binding MinWeight, StringFormat={}{0:N1}}" />
+            <TextBlock Grid.Column="1" Grid.Row="10" Text="{Binding MaxWeight,StringFormat={}{0:N1}}" />
+            <TextBlock Grid.Column="1" Grid.Row="11" Text="{Binding AlgoWeight, StringFormat={}{0:N1}}" />
+            <TextBlock Grid.Column="1" Grid.Row="12" Text="{Binding WeightPlates}" />-->
+
+
+        </Grid>
+    </Grid>
+</UserControl>

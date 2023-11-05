@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "bJOQtIfmHayxOmmsZX3j75uqtGP2PisTfYTb9m+ajD3OKBCVIX76S2gEMJGIa98AzLApi/11AcaGlecreyZNuA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ingam\\source\\repos\\BarbellPro\\BarbellPro.Application\\BarbellPro.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ingam\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.77\\microsoft.xaml.behaviors.wpf.1.1.77.nupkg.sha512",
+    "C:\\Users\\ingam\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

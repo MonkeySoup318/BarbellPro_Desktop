@@ -1,0 +1,19 @@
+{
+  "_0_5kg": {
+    "Width": 14.84,
+    "Height": 120.00,
+    "Stretch": "None"
+  },
+  "_1_0kg": {
+    "Width": 14.84,
+    "Height": 130.00,
+    "Stretch": "None"
+  },
+  "_clip": {
+    "Width": 50.00,
+    "Height": 120.00,
+    "MarginTop": -20.00,
+    "Stretch": "None"
+  }
+}
+
