@@ -21,6 +21,14 @@ namespace BarbellPro.Application.ViewModels
         public ObservableCollection<CalculationObjectModel> CObject { get; set; }
         private readonly ImageManagerService imageManager;
 
+        // Property for AppIcon Image
+        private ImageSource appIconImage;
+        public ImageSource AppIconImage
+        {
+            get { return appIconImage; }
+            private set { appIconImage = value; }
+        }
+
         // Property for the Barbell Image
         private ImageSource emptyBarbellImage;
         public ImageSource EmptyBarbellImage
@@ -176,16 +184,18 @@ namespace BarbellPro.Application.ViewModels
             };
 
             imageManager = new ImageManagerService();
-            imageManager.LoadImages();
+            imageManager.LoadBumberPlateImages();  
+            
+            appIconImage = ImageManagerService.LoadAppIconImage();
+            emptyBarbellImage = imageManager.GetImageFromDictionary(Images._barbell).Source;
 
-            emptyBarbellImage = imageManager.GetImage(Images._barbell).Source;
             Array.Copy(weightPlates, originalWeightPlates, weightPlates.Length);
 
             CalculateCommand = new RelayCommand(ExecuteCalculate, CanExecuteCalculate);
             ResetViewCommand = new RelayCommand(ExecuteResetView);
         }
 
-        private void SetMinWeight()
+        public void SetMinWeight()
         {
             MinWeight = SelectedGender switch
             {
@@ -195,12 +205,12 @@ namespace BarbellPro.Application.ViewModels
             };
         }
 
-        private void SetMaxWeight()
+        public void SetMaxWeight()
         {
             MaxWeight = MaxWeightDefault;
         }
 
-        private void SetAlgoWeight()
+        public void SetAlgoWeight()
         {
             double _algoWeight = (InputWeight - MinWeight) / 2;
 
@@ -210,16 +220,16 @@ namespace BarbellPro.Application.ViewModels
                 AlgoWeight = _algoWeight;           
         }
 
-        private bool CanExecuteCalculate(object obj)
+        public bool CanExecuteCalculate(object obj)
         {
             SetMinWeight();
             SetMaxWeight();
             SetAlgoWeight();
-            //return (AlgoWeight >= MinWeight) && (AlgoWeight <= MaxWeight);
-            return ((AlgoWeight > 0.0) && (AlgoWeight <= MaxWeight));
+
+            return ((AlgoWeight > 0.0) && (InputWeight <= MaxWeight));
         }
 
-        private void ExecuteCalculate(object obj)
+        public void ExecuteCalculate(object obj)
         {
             ClearAllImages();
             double[] plateWeights = { 25.0, 20.0, 15.0, 10.0, 5.0, 2.5, 2.0, 1.5, 1.0, 0.5 };
@@ -239,7 +249,7 @@ namespace BarbellPro.Application.ViewModels
             DisplayImagesFromKeys();
         }
 
-        private void DisplayImagesFromKeys()
+        public void DisplayImagesFromKeys()
         {
             Images[] weightPlateKeys =
             {
@@ -259,17 +269,17 @@ namespace BarbellPro.Application.ViewModels
             for (int i = 0; i < WeightPlates.Length; i++)
             {
                 for (int j = 0; j < WeightPlates[i]; j++)
-                    ImageCollection.Add(imageManager.GetImage(weightPlateKeys[i]));
+                    ImageCollection.Add(imageManager.GetImageFromDictionary(weightPlateKeys[i]));
             }
 
             if (HasClip)
             {
                 int clipIndex = 10;
-                ImageCollection.Add(imageManager.GetImage(weightPlateKeys[clipIndex]));
+                ImageCollection.Add(imageManager.GetImageFromDictionary(weightPlateKeys[clipIndex]));
             }               
         }
 
-        private void ClearAllImages()
+        public void ClearAllImages()
         {
             Array.Copy(originalWeightPlates, weightPlates, originalWeightPlates.Length);
             OnPropertyChanged(nameof(WeightPlates));
@@ -279,7 +289,7 @@ namespace BarbellPro.Application.ViewModels
                 ImageCollection.Clear();
         }
 
-        private void ExecuteResetView(object obj)
+        public void ExecuteResetView(object obj)
         {
             // Reset the input properties to default values
             SelectedGender = Gender.Male;

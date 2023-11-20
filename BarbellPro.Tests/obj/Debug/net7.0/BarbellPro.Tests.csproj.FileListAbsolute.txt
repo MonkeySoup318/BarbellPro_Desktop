@@ -1,0 +1,5 @@
+C:\Users\ingam\source\repos\BarbellPro\BarbellPro.Tests\obj\Debug\net7.0\BarbellPro.Tests.csproj.AssemblyReference.cache
+C:\Users\ingam\source\repos\BarbellPro\BarbellPro.Tests\obj\Debug\net7.0\BarbellPro.Tests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ingam\source\repos\BarbellPro\BarbellPro.Tests\obj\Debug\net7.0\BarbellPro.Tests.AssemblyInfoInputs.cache
+C:\Users\ingam\source\repos\BarbellPro\BarbellPro.Tests\obj\Debug\net7.0\BarbellPro.Tests.AssemblyInfo.cs
+C:\Users\ingam\source\repos\BarbellPro\BarbellPro.Tests\obj\Debug\net7.0\BarbellPro.Tests.csproj.CoreCompileInputs.cache

@@ -10,7 +10,7 @@ namespace BarbellPro.Application.Models.Services
     {
         public Dictionary<Images, ImagePropertiesModel>? ParseImageProperties()
         {
-            string fullPath = @"C:\Users\ingam\source\repos\BarbellPro\BarbellPro.Application\Resources\ImageProperties.json";
+            string fullPath = FilePathManagerModel.ImagePropertiesPath;
             string json = File.ReadAllText(fullPath);
             var result = JsonConvert.DeserializeObject<Dictionary<Images, ImagePropertiesModel>>(json);
 

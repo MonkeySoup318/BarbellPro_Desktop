@@ -10,18 +10,51 @@
     <Compile Update="Views\CalculatorView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\LoadoutView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\SettingsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Views\MainWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="Views\CalculatorView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Styles\ButtonStyles.xaml">
+    <Page Update="Views\LoadoutView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\SettingsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Styles\CalculatorResetButtonStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Styles\CalculatorRunButtonStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Styles\CalculatorTextBoxStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Styles\ComboBoxStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Styles\NavigationPaneButtonStyle.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Styles\TextBoxStyles.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Styles\WindowBorderExitButtonStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Styles\WindowBorderMinMaxButtonStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Themes\DarkTheme.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Themes\LightTheme.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

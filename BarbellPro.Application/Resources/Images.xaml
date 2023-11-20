@@ -1,124 +1,183 @@
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  <Geometry x:Key="leerestange_finiGeometry">F1 M400,100z M0,0z M114,-214.6L114,-241.1 92.6,-241.1 92.6,-205.6C47.7,-205.6,2.89999999999999,-205.6,-42,-205.6L-42,-185.6 -42,-183.8 -42,-161.6C2.8,-161.6,47.7,-161.6,92.5,-161.6L92.5,-126.8 114,-126.8 114,-161.6C114,-161.6,114,-161.6,114,-161.6L114,-150.6 323,-150.6 323,-214.6 114,-214.6z</Geometry>
-  <DrawingGroup x:Key="leerestange_finiDrawingGroup" ClipGeometry="M0,0 V100 H400 V0 H0 Z">
-    <DrawingGroup.Transform>
-      <TranslateTransform X="89.5" Y="241.10000610351563" />
-    </DrawingGroup.Transform>
-    <GeometryDrawing Brush="#FF616063" Geometry="{StaticResource leerestange_finiGeometry}" />
-    <GeometryDrawing Brush="#FF616063">
-      <GeometryDrawing.Geometry>
-        <RectangleGeometry RadiusX="0" RadiusY="0" Rect="-89.5,30.5,134,37.5" />
-      </GeometryDrawing.Geometry>
-    </GeometryDrawing>
-    <GeometryDrawing Brush="#FF616063">
-      <GeometryDrawing.Geometry>
-        <RectangleGeometry RadiusX="0" RadiusY="0" Rect="43.5,0.7,30.1,98.5" />
-      </GeometryDrawing.Geometry>
-    </GeometryDrawing>
-    <GeometryDrawing Brush="#FF616063">
-      <GeometryDrawing.Geometry>
-        <RectangleGeometry RadiusX="0" RadiusY="0" Rect="73.5,19.9,653,56.1" />
-      </GeometryDrawing.Geometry>
-    </GeometryDrawing>
-  </DrawingGroup>
-  <DrawingImage x:Key="leerestange_finiDrawingImage" Drawing="{StaticResource leerestange_finiDrawingGroup}" />
-  <Geometry x:Key="_5kg_wei___finiGeometry1">F1 M26.9,230z M0,0z M6.1,229.5C3,229.5,0.3,227.5,0.3,224.7L0.3,4.9C0.3,2.3,2.8,0.100000000000001,6.1,0.100000000000001L20.6,0.100000000000001C23.7,0.100000000000001,26.4,2.1,26.4,4.9L26.4,224.7C26.4,227.3,23.9,229.5,20.6,229.5L6.1,229.5z</Geometry>
-  <Geometry x:Key="_5kg_wei___finiGeometry2">F1 M26.9,230z M0,0z M20.7,0.9C23.6,0.9,25.9,2.8,25.9,5.2L25.9,225C25.9,227.4,23.6,229.3,20.7,229.3L6.2,229.3C3.3,229.3,1,227.4,1,225L1,5.1C1,2.7,3.3,0.8,6.2,0.8L20.7,0.9 M20.7,0L6.2,0C2.7,0,0,2.2,0,5.1L0,224.9C0,227.8,2.7,230,6.2,230L20.7,230C24.2,230,26.9,227.8,26.9,224.9L26.9,5.1C26.9,2.2,24.2,0,20.7,0L20.7,0z</Geometry>
-  <DrawingGroup x:Key="_5kg_wei___finiDrawingGroup" ClipGeometry="M0,0 V230 H26.9 V0 H0 Z">
-    <DrawingGroup Opacity="1">
-      <GeometryDrawing Brush="#FFE6E6E6" Geometry="{StaticResource _5kg_wei___finiGeometry1}" />
-      <GeometryDrawing Brush="#FF000000" Geometry="{StaticResource _5kg_wei___finiGeometry2}" />
+    <Geometry x:Key="leerestange_finiGeometry">F1 M400,100z M0,0z M114,-214.6L114,-241.1 92.6,-241.1 92.6,-205.6C47.7,-205.6,2.89999999999999,-205.6,-42,-205.6L-42,-185.6 -42,-183.8 -42,-161.6C2.8,-161.6,47.7,-161.6,92.5,-161.6L92.5,-126.8 114,-126.8 114,-161.6C114,-161.6,114,-161.6,114,-161.6L114,-150.6 323,-150.6 323,-214.6 114,-214.6z</Geometry>
+    <DrawingGroup x:Key="leerestange_finiDrawingGroup" ClipGeometry="M0,0 V100 H400 V0 H0 Z">
+        <DrawingGroup.Transform>
+            <TranslateTransform X="89.5" Y="241.10000610351563" />
+        </DrawingGroup.Transform>
+        <GeometryDrawing Brush="#FF616063" Geometry="{StaticResource leerestange_finiGeometry}" />
+        <GeometryDrawing Brush="#FF616063">
+            <GeometryDrawing.Geometry>
+                <RectangleGeometry
+                    RadiusX="0"
+                    RadiusY="0"
+                    Rect="-89.5,30.5,134,37.5" />
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#FF616063">
+            <GeometryDrawing.Geometry>
+                <RectangleGeometry
+                    RadiusX="0"
+                    RadiusY="0"
+                    Rect="43.5,0.7,30.1,98.5" />
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#FF616063">
+            <GeometryDrawing.Geometry>
+                <RectangleGeometry
+                    RadiusX="0"
+                    RadiusY="0"
+                    Rect="73.5,19.9,653,56.1" />
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
     </DrawingGroup>
-  </DrawingGroup>
-  <DrawingImage x:Key="_5kg_wei___finiDrawingImage" Drawing="{StaticResource _5kg_wei___finiDrawingGroup}" />
-  <Geometry x:Key="_25kg_rot_finiGeometry">F1 M1366,768z M0,0z M834.3,675.4L782.3,675.4C780.6,675.4,779.3,674,779.3,672.4L779.3,228.4C779.3,226.8,780.6,225.4,782.3,225.4L834.3,225.4C836,225.4,837.3,226.8,837.3,228.4L837.3,672.4C837.3,674.1,835.9,675.4,834.3,675.4z</Geometry>
-  <DrawingGroup x:Key="_25kg_rot_finiDrawingGroup" ClipGeometry="M0,0 V768 H1366 V0 H0 Z">
-    <GeometryDrawing Brush="#FFFF1D25" Geometry="{StaticResource _25kg_rot_finiGeometry}">
-      <GeometryDrawing.Pen>
-        <Pen Brush="#FF000000" Thickness="1" StartLineCap="Flat" EndLineCap="Flat" LineJoin="Miter" />
-      </GeometryDrawing.Pen>
-    </GeometryDrawing>
-  </DrawingGroup>
-  <DrawingImage x:Key="_25kg_rot_finiDrawingImage" Drawing="{StaticResource _25kg_rot_finiDrawingGroup}" />
-  <Geometry x:Key="_20kg_blau_finiGeometry">F1 M1366,768z M0,0z M696.5,96L740.5,96C742.2,96,743.5,97.3,743.5,99L743.5,543C743.5,544.7,742.2,546,740.5,546L696.5,546C694.8,546,693.5,544.7,693.5,543L693.5,99C693.5,97.3,694.8,96,696.5,96z</Geometry>
-  <DrawingGroup x:Key="_20kg_blau_finiDrawingGroup" ClipGeometry="M0,0 V768 H1366 V0 H0 Z">
-    <GeometryDrawing Brush="#FF0000FF" Geometry="{StaticResource _20kg_blau_finiGeometry}">
-      <GeometryDrawing.Pen>
-        <Pen Brush="#FF000000" Thickness="0.5" StartLineCap="Flat" EndLineCap="Flat" LineJoin="Miter" />
-      </GeometryDrawing.Pen>
-    </GeometryDrawing>
-  </DrawingGroup>
-  <DrawingImage x:Key="_20kg_blau_finiDrawingImage" Drawing="{StaticResource _20kg_blau_finiDrawingGroup}" />
-  <Geometry x:Key="verschluss_grau_finiGeometry">F1 M23.9,47.9z M0,0z M20,9.2C22.1,8.8 23.7,7 23.7,4.8 23.7,2.3 21.7,0.299999999999999 19.2,0.299999999999999 16.7,0.299999999999999 14.7,2.3 14.7,4.8 14.7,5.9 15.1,6.9 15.8,7.7L15.7,8.2C14.3,7.9 12.8,7.7 11.1,7.7 5.7,7.9 1.8,10.7 0.299999999999999,12L0.299999999999999,43.4C1.7,44.6 5.7,47.7 11.5,47.7 17.4,47.7 21.5,44.5 22.8,43.4 22.8,32.9 22.8,22.5 22.8,12 22.2,11.5 21.2,10.7 19.7,9.9L20,9.2z</Geometry>
-  <DrawingGroup x:Key="verschluss_grau_finiDrawingGroup" ClipGeometry="M0,0 V47.9 H23.9 V0 H0 Z">
-    <GeometryDrawing Brush="#FF333333" Geometry="{StaticResource verschluss_grau_finiGeometry}">
-      <GeometryDrawing.Pen>
-        <Pen Brush="#FF000000" Thickness="0.5" StartLineCap="Flat" EndLineCap="Flat" LineJoin="Miter" />
-      </GeometryDrawing.Pen>
-    </GeometryDrawing>
-  </DrawingGroup>
-  <DrawingImage x:Key="verschluss_grau_finiDrawingImage" Drawing="{StaticResource verschluss_grau_finiDrawingGroup}" />
-  <Geometry x:Key="_15kg_gelb_finiGeometry">F1 M1366,768z M0,0z M649,145L682,145C683.7,145,685,146.3,685,148L685,592C685,593.7,683.7,595,682,595L649,595C647.3,595,646,593.7,646,592L646,148C646,146.3,647.3,145,649,145z</Geometry>
-  <DrawingGroup x:Key="_15kg_gelb_finiDrawingGroup" ClipGeometry="M0,0 V768 H1366 V0 H0 Z">
-    <GeometryDrawing Brush="#FFFCEE21" Geometry="{StaticResource _15kg_gelb_finiGeometry}">
-      <GeometryDrawing.Pen>
-        <Pen Brush="#FF000000" Thickness="0.5" StartLineCap="Flat" EndLineCap="Flat" LineJoin="Miter" />
-      </GeometryDrawing.Pen>
-    </GeometryDrawing>
-  </DrawingGroup>
-  <DrawingImage x:Key="_15kg_gelb_finiDrawingImage" Drawing="{StaticResource _15kg_gelb_finiDrawingGroup}" />
-  <Geometry x:Key="_1_0kg_gru__n_finiGeometry">F1 M122,529z M0,0z M42.4,53.6L67.9,53.6C72.6,53.6,76.4,57.4,76.4,62.1L76.4,498.6C76.4,503.3,72.6,507.1,67.9,507.1L42.4,507.1C37.7,507.1,33.9,503.3,33.9,498.6L33.9,62.1C33.9,57.4,37.7,53.6,42.4,53.6z</Geometry>
-  <DrawingGroup x:Key="_1_0kg_gru__n_finiDrawingGroup" ClipGeometry="M0,0 V529 H122 V0 H0 Z">
-    <GeometryDrawing Brush="#FF009245" Geometry="{StaticResource _1_0kg_gru__n_finiGeometry}">
-      <GeometryDrawing.Pen>
-        <Pen Brush="#FF000000" Thickness="0.5" StartLineCap="Flat" EndLineCap="Flat" LineJoin="Miter" />
-      </GeometryDrawing.Pen>
-    </GeometryDrawing>
-  </DrawingGroup>
-  <DrawingImage x:Key="_1_0kg_gru__n_finiDrawingImage" Drawing="{StaticResource _1_0kg_gru__n_finiDrawingGroup}" />
-  <Geometry x:Key="_1_5kg_gelb_finiGeometry">F1 M1366,768z M0,0z M677.5,248.5L689.5,248.5C691.2,248.5,692.5,249.8,692.5,251.5L692.5,420.5C692.5,422.2,691.2,423.5,689.5,423.5L677.5,423.5C675.8,423.5,674.5,422.2,674.5,420.5L674.5,251.5C674.5,249.8,675.8,248.5,677.5,248.5z</Geometry>
-  <DrawingGroup x:Key="_1_5kg_gelb_finiDrawingGroup" ClipGeometry="M0,0 V768 H1366 V0 H0 Z">
-    <GeometryDrawing Brush="#FFFCEE21" Geometry="{StaticResource _1_5kg_gelb_finiGeometry}">
-      <GeometryDrawing.Pen>
-        <Pen Brush="#FF000000" Thickness="0.5" StartLineCap="Flat" EndLineCap="Flat" LineJoin="Miter" />
-      </GeometryDrawing.Pen>
-    </GeometryDrawing>
-  </DrawingGroup>
-  <DrawingImage x:Key="_1_5kg_gelb_finiDrawingImage" Drawing="{StaticResource _1_5kg_gelb_finiDrawingGroup}" />
-  <Geometry x:Key="_2_5kg_rot_finiGeometry">F1 M1366,768z M0,0z M677,246.5L690,246.5C691.7,246.5,693,247.8,693,249.5L693,453.5C693,455.2,691.7,456.5,690,456.5L677,456.5C675.3,456.5,674,455.2,674,453.5L674,249.5C674,247.8,675.3,246.5,677,246.5z</Geometry>
-  <DrawingGroup x:Key="_2_5kg_rot_finiDrawingGroup" ClipGeometry="M0,0 V768 H1366 V0 H0 Z">
-    <GeometryDrawing Brush="#FFFF1D25" Geometry="{StaticResource _2_5kg_rot_finiGeometry}">
-      <GeometryDrawing.Pen>
-        <Pen Brush="#FF000000" Thickness="0.5" StartLineCap="Flat" EndLineCap="Flat" LineJoin="Miter" />
-      </GeometryDrawing.Pen>
-    </GeometryDrawing>
-  </DrawingGroup>
-  <DrawingImage x:Key="_2_5kg_rot_finiDrawingImage" Drawing="{StaticResource _2_5kg_rot_finiDrawingGroup}" />
-  <Geometry x:Key="_10kg_gru__n_finiGeometry">F1 M1366,768z M0,0z M681,98L710,98C711.7,98,713,99.3,713,101L713,545C713,546.7,711.7,548,710,548L681,548C679.3,548,678,546.7,678,545L678,101C678,99.3,679.3,98,681,98z</Geometry>
-  <DrawingGroup x:Key="_10kg_gru__n_finiDrawingGroup" ClipGeometry="M0,0 V768 H1366 V0 H0 Z">
-    <GeometryDrawing Brush="#FF009245" Geometry="{StaticResource _10kg_gru__n_finiGeometry}">
-      <GeometryDrawing.Pen>
-        <Pen Brush="#FF000000" Thickness="0.5" StartLineCap="Flat" EndLineCap="Flat" LineJoin="Miter" />
-      </GeometryDrawing.Pen>
-    </GeometryDrawing>
-  </DrawingGroup>
-  <DrawingImage x:Key="_10kg_gru__n_finiDrawingImage" Drawing="{StaticResource _10kg_gru__n_finiDrawingGroup}" />
-  <Geometry x:Key="_0_5kg_wei___finiGeometry">F1 M123,445z M0,0z M46.2,30L66,30C70.7,30,74.5,33.8,74.5,38.5L74.5,404.2C74.5,408.9,70.7,412.7,66,412.7L46.2,412.7C41.5,412.7,37.7,408.9,37.7,404.2L37.7,38.5C37.7,33.8,41.5,30,46.2,30z</Geometry>
-  <DrawingGroup x:Key="_0_5kg_wei___finiDrawingGroup" ClipGeometry="M0,0 V445 H123 V0 H0 Z">
-    <GeometryDrawing Brush="#FFF2F2F2" Geometry="{StaticResource _0_5kg_wei___finiGeometry}">
-      <GeometryDrawing.Pen>
-        <Pen Brush="#FF000000" Thickness="0.5" StartLineCap="Flat" EndLineCap="Flat" LineJoin="Miter" />
-      </GeometryDrawing.Pen>
-    </GeometryDrawing>
-  </DrawingGroup>
-  <DrawingImage x:Key="_0_5kg_wei___finiDrawingImage" Drawing="{StaticResource _0_5kg_wei___finiDrawingGroup}" />
-  <Geometry x:Key="_2_0kg_blau_finiGeometry">F1 M768,1366z M0,0z M392,562L405,562C406.7,562,408,563.3,408,565L408,749C408,750.7,406.7,752,405,752L392,752C390.3,752,389,750.7,389,749L389,565C389,563.3,390.3,562,392,562z</Geometry>
-  <DrawingGroup x:Key="_2_0kg_blau_finiDrawingGroup" ClipGeometry="M0,0 V1366 H768 V0 H0 Z">
-    <GeometryDrawing Brush="#FF0000FF" Geometry="{StaticResource _2_0kg_blau_finiGeometry}">
-      <GeometryDrawing.Pen>
-        <Pen Brush="#FF000000" Thickness="0.5" StartLineCap="Flat" EndLineCap="Flat" LineJoin="Miter" />
-      </GeometryDrawing.Pen>
-    </GeometryDrawing>
-  </DrawingGroup>
-  <DrawingImage x:Key="_2_0kg_blau_finiDrawingImage" Drawing="{StaticResource _2_0kg_blau_finiDrawingGroup}" />
+    <DrawingImage x:Key="leerestange_finiDrawingImage" Drawing="{StaticResource leerestange_finiDrawingGroup}" />
+    <Geometry x:Key="_5kg_wei___finiGeometry1">F1 M26.9,230z M0,0z M6.1,229.5C3,229.5,0.3,227.5,0.3,224.7L0.3,4.9C0.3,2.3,2.8,0.100000000000001,6.1,0.100000000000001L20.6,0.100000000000001C23.7,0.100000000000001,26.4,2.1,26.4,4.9L26.4,224.7C26.4,227.3,23.9,229.5,20.6,229.5L6.1,229.5z</Geometry>
+    <Geometry x:Key="_5kg_wei___finiGeometry2">F1 M26.9,230z M0,0z M20.7,0.9C23.6,0.9,25.9,2.8,25.9,5.2L25.9,225C25.9,227.4,23.6,229.3,20.7,229.3L6.2,229.3C3.3,229.3,1,227.4,1,225L1,5.1C1,2.7,3.3,0.8,6.2,0.8L20.7,0.9 M20.7,0L6.2,0C2.7,0,0,2.2,0,5.1L0,224.9C0,227.8,2.7,230,6.2,230L20.7,230C24.2,230,26.9,227.8,26.9,224.9L26.9,5.1C26.9,2.2,24.2,0,20.7,0L20.7,0z</Geometry>
+    <DrawingGroup x:Key="_5kg_wei___finiDrawingGroup" ClipGeometry="M0,0 V230 H26.9 V0 H0 Z">
+        <DrawingGroup Opacity="1">
+            <GeometryDrawing Brush="#FFE6E6E6" Geometry="{StaticResource _5kg_wei___finiGeometry1}" />
+            <GeometryDrawing Brush="#FF000000" Geometry="{StaticResource _5kg_wei___finiGeometry2}" />
+        </DrawingGroup>
+    </DrawingGroup>
+    <DrawingImage x:Key="_5kg_wei___finiDrawingImage" Drawing="{StaticResource _5kg_wei___finiDrawingGroup}" />
+    <Geometry x:Key="_25kg_rot_finiGeometry">F1 M1366,768z M0,0z M834.3,675.4L782.3,675.4C780.6,675.4,779.3,674,779.3,672.4L779.3,228.4C779.3,226.8,780.6,225.4,782.3,225.4L834.3,225.4C836,225.4,837.3,226.8,837.3,228.4L837.3,672.4C837.3,674.1,835.9,675.4,834.3,675.4z</Geometry>
+    <DrawingGroup x:Key="_25kg_rot_finiDrawingGroup" ClipGeometry="M0,0 V768 H1366 V0 H0 Z">
+        <GeometryDrawing Brush="#FFFF1D25" Geometry="{StaticResource _25kg_rot_finiGeometry}">
+            <GeometryDrawing.Pen>
+                <Pen
+                    Brush="#FF000000"
+                    EndLineCap="Flat"
+                    LineJoin="Miter"
+                    StartLineCap="Flat"
+                    Thickness="1" />
+            </GeometryDrawing.Pen>
+        </GeometryDrawing>
+    </DrawingGroup>
+    <DrawingImage x:Key="_25kg_rot_finiDrawingImage" Drawing="{StaticResource _25kg_rot_finiDrawingGroup}" />
+    <Geometry x:Key="_20kg_blau_finiGeometry">F1 M1366,768z M0,0z M696.5,96L740.5,96C742.2,96,743.5,97.3,743.5,99L743.5,543C743.5,544.7,742.2,546,740.5,546L696.5,546C694.8,546,693.5,544.7,693.5,543L693.5,99C693.5,97.3,694.8,96,696.5,96z</Geometry>
+    <DrawingGroup x:Key="_20kg_blau_finiDrawingGroup" ClipGeometry="M0,0 V768 H1366 V0 H0 Z">
+        <GeometryDrawing Brush="#FF0000FF" Geometry="{StaticResource _20kg_blau_finiGeometry}">
+            <GeometryDrawing.Pen>
+                <Pen
+                    Brush="#FF000000"
+                    EndLineCap="Flat"
+                    LineJoin="Miter"
+                    StartLineCap="Flat"
+                    Thickness="0.5" />
+            </GeometryDrawing.Pen>
+        </GeometryDrawing>
+    </DrawingGroup>
+    <DrawingImage x:Key="_20kg_blau_finiDrawingImage" Drawing="{StaticResource _20kg_blau_finiDrawingGroup}" />
+    <Geometry x:Key="verschluss_grau_finiGeometry">F1 M23.9,47.9z M0,0z M20,9.2C22.1,8.8 23.7,7 23.7,4.8 23.7,2.3 21.7,0.299999999999999 19.2,0.299999999999999 16.7,0.299999999999999 14.7,2.3 14.7,4.8 14.7,5.9 15.1,6.9 15.8,7.7L15.7,8.2C14.3,7.9 12.8,7.7 11.1,7.7 5.7,7.9 1.8,10.7 0.299999999999999,12L0.299999999999999,43.4C1.7,44.6 5.7,47.7 11.5,47.7 17.4,47.7 21.5,44.5 22.8,43.4 22.8,32.9 22.8,22.5 22.8,12 22.2,11.5 21.2,10.7 19.7,9.9L20,9.2z</Geometry>
+    <DrawingGroup x:Key="verschluss_grau_finiDrawingGroup" ClipGeometry="M0,0 V47.9 H23.9 V0 H0 Z">
+        <GeometryDrawing Brush="#FF333333" Geometry="{StaticResource verschluss_grau_finiGeometry}">
+            <GeometryDrawing.Pen>
+                <Pen
+                    Brush="#FF000000"
+                    EndLineCap="Flat"
+                    LineJoin="Miter"
+                    StartLineCap="Flat"
+                    Thickness="0.5" />
+            </GeometryDrawing.Pen>
+        </GeometryDrawing>
+    </DrawingGroup>
+    <DrawingImage x:Key="verschluss_grau_finiDrawingImage" Drawing="{StaticResource verschluss_grau_finiDrawingGroup}" />
+    <Geometry x:Key="_15kg_gelb_finiGeometry">F1 M1366,768z M0,0z M649,145L682,145C683.7,145,685,146.3,685,148L685,592C685,593.7,683.7,595,682,595L649,595C647.3,595,646,593.7,646,592L646,148C646,146.3,647.3,145,649,145z</Geometry>
+    <DrawingGroup x:Key="_15kg_gelb_finiDrawingGroup" ClipGeometry="M0,0 V768 H1366 V0 H0 Z">
+        <GeometryDrawing Brush="#FFFCEE21" Geometry="{StaticResource _15kg_gelb_finiGeometry}">
+            <GeometryDrawing.Pen>
+                <Pen
+                    Brush="#FF000000"
+                    EndLineCap="Flat"
+                    LineJoin="Miter"
+                    StartLineCap="Flat"
+                    Thickness="0.5" />
+            </GeometryDrawing.Pen>
+        </GeometryDrawing>
+    </DrawingGroup>
+    <DrawingImage x:Key="_15kg_gelb_finiDrawingImage" Drawing="{StaticResource _15kg_gelb_finiDrawingGroup}" />
+    <Geometry x:Key="_1_0kg_gru__n_finiGeometry">F1 M122,529z M0,0z M42.4,53.6L67.9,53.6C72.6,53.6,76.4,57.4,76.4,62.1L76.4,498.6C76.4,503.3,72.6,507.1,67.9,507.1L42.4,507.1C37.7,507.1,33.9,503.3,33.9,498.6L33.9,62.1C33.9,57.4,37.7,53.6,42.4,53.6z</Geometry>
+    <DrawingGroup x:Key="_1_0kg_gru__n_finiDrawingGroup" ClipGeometry="M0,0 V529 H122 V0 H0 Z">
+        <GeometryDrawing Brush="#FF009245" Geometry="{StaticResource _1_0kg_gru__n_finiGeometry}">
+            <GeometryDrawing.Pen>
+                <Pen
+                    Brush="#FF000000"
+                    EndLineCap="Flat"
+                    LineJoin="Miter"
+                    StartLineCap="Flat"
+                    Thickness="0.5" />
+            </GeometryDrawing.Pen>
+        </GeometryDrawing>
+    </DrawingGroup>
+    <DrawingImage x:Key="_1_0kg_gru__n_finiDrawingImage" Drawing="{StaticResource _1_0kg_gru__n_finiDrawingGroup}" />
+    <Geometry x:Key="_1_5kg_gelb_finiGeometry">F1 M1366,768z M0,0z M677.5,248.5L689.5,248.5C691.2,248.5,692.5,249.8,692.5,251.5L692.5,420.5C692.5,422.2,691.2,423.5,689.5,423.5L677.5,423.5C675.8,423.5,674.5,422.2,674.5,420.5L674.5,251.5C674.5,249.8,675.8,248.5,677.5,248.5z</Geometry>
+    <DrawingGroup x:Key="_1_5kg_gelb_finiDrawingGroup" ClipGeometry="M0,0 V768 H1366 V0 H0 Z">
+        <GeometryDrawing Brush="#FFFCEE21" Geometry="{StaticResource _1_5kg_gelb_finiGeometry}">
+            <GeometryDrawing.Pen>
+                <Pen
+                    Brush="#FF000000"
+                    EndLineCap="Flat"
+                    LineJoin="Miter"
+                    StartLineCap="Flat"
+                    Thickness="0.5" />
+            </GeometryDrawing.Pen>
+        </GeometryDrawing>
+    </DrawingGroup>
+    <DrawingImage x:Key="_1_5kg_gelb_finiDrawingImage" Drawing="{StaticResource _1_5kg_gelb_finiDrawingGroup}" />
+    <Geometry x:Key="_2_5kg_rot_finiGeometry">F1 M1366,768z M0,0z M677,246.5L690,246.5C691.7,246.5,693,247.8,693,249.5L693,453.5C693,455.2,691.7,456.5,690,456.5L677,456.5C675.3,456.5,674,455.2,674,453.5L674,249.5C674,247.8,675.3,246.5,677,246.5z</Geometry>
+    <DrawingGroup x:Key="_2_5kg_rot_finiDrawingGroup" ClipGeometry="M0,0 V768 H1366 V0 H0 Z">
+        <GeometryDrawing Brush="#FFFF1D25" Geometry="{StaticResource _2_5kg_rot_finiGeometry}">
+            <GeometryDrawing.Pen>
+                <Pen
+                    Brush="#FF000000"
+                    EndLineCap="Flat"
+                    LineJoin="Miter"
+                    StartLineCap="Flat"
+                    Thickness="0.5" />
+            </GeometryDrawing.Pen>
+        </GeometryDrawing>
+    </DrawingGroup>
+    <DrawingImage x:Key="_2_5kg_rot_finiDrawingImage" Drawing="{StaticResource _2_5kg_rot_finiDrawingGroup}" />
+    <Geometry x:Key="_10kg_gru__n_finiGeometry">F1 M1366,768z M0,0z M681,98L710,98C711.7,98,713,99.3,713,101L713,545C713,546.7,711.7,548,710,548L681,548C679.3,548,678,546.7,678,545L678,101C678,99.3,679.3,98,681,98z</Geometry>
+    <DrawingGroup x:Key="_10kg_gru__n_finiDrawingGroup" ClipGeometry="M0,0 V768 H1366 V0 H0 Z">
+        <GeometryDrawing Brush="#FF009245" Geometry="{StaticResource _10kg_gru__n_finiGeometry}">
+            <GeometryDrawing.Pen>
+                <Pen
+                    Brush="#FF000000"
+                    EndLineCap="Flat"
+                    LineJoin="Miter"
+                    StartLineCap="Flat"
+                    Thickness="0.5" />
+            </GeometryDrawing.Pen>
+        </GeometryDrawing>
+    </DrawingGroup>
+    <DrawingImage x:Key="_10kg_gru__n_finiDrawingImage" Drawing="{StaticResource _10kg_gru__n_finiDrawingGroup}" />
+    <Geometry x:Key="_0_5kg_wei___finiGeometry">F1 M123,445z M0,0z M46.2,30L66,30C70.7,30,74.5,33.8,74.5,38.5L74.5,404.2C74.5,408.9,70.7,412.7,66,412.7L46.2,412.7C41.5,412.7,37.7,408.9,37.7,404.2L37.7,38.5C37.7,33.8,41.5,30,46.2,30z</Geometry>
+    <DrawingGroup x:Key="_0_5kg_wei___finiDrawingGroup" ClipGeometry="M0,0 V445 H123 V0 H0 Z">
+        <GeometryDrawing Brush="#FFF2F2F2" Geometry="{StaticResource _0_5kg_wei___finiGeometry}">
+            <GeometryDrawing.Pen>
+                <Pen
+                    Brush="#FF000000"
+                    EndLineCap="Flat"
+                    LineJoin="Miter"
+                    StartLineCap="Flat"
+                    Thickness="0.5" />
+            </GeometryDrawing.Pen>
+        </GeometryDrawing>
+    </DrawingGroup>
+    <DrawingImage x:Key="_0_5kg_wei___finiDrawingImage" Drawing="{StaticResource _0_5kg_wei___finiDrawingGroup}" />
+    <Geometry x:Key="_2_0kg_blau_finiGeometry">F1 M768,1366z M0,0z M392,562L405,562C406.7,562,408,563.3,408,565L408,749C408,750.7,406.7,752,405,752L392,752C390.3,752,389,750.7,389,749L389,565C389,563.3,390.3,562,392,562z</Geometry>
+    <DrawingGroup x:Key="_2_0kg_blau_finiDrawingGroup" ClipGeometry="M0,0 V1366 H768 V0 H0 Z">
+        <GeometryDrawing Brush="#FF0000FF" Geometry="{StaticResource _2_0kg_blau_finiGeometry}">
+            <GeometryDrawing.Pen>
+                <Pen
+                    Brush="#FF000000"
+                    EndLineCap="Flat"
+                    LineJoin="Miter"
+                    StartLineCap="Flat"
+                    Thickness="0.5" />
+            </GeometryDrawing.Pen>
+        </GeometryDrawing>
+    </DrawingGroup>
+    <DrawingImage x:Key="_2_0kg_blau_finiDrawingImage" Drawing="{StaticResource _2_0kg_blau_finiDrawingGroup}" />
 </ResourceDictionary>

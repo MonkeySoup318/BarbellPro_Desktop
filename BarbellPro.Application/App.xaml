@@ -1,13 +1,36 @@
-﻿<Application x:Class="BarbellPro.App"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:BarbellPro.Application"
-             StartupUri="Views/MainWindow.xaml">
+﻿<Application
+    x:Class="BarbellPro.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:BarbellPro.Application"
+    xmlns:viewModel="clr-namespace:BarbellPro.Application.ViewModels"
+    xmlns:view="clr-namespace:BarbellPro.Application.Views">
+    <!--StartupUri="Views/CalculatorView.xaml">-->
     <Application.Resources>
+        <DataTemplate DataType="{x:Type viewModel:CalculatorViewModel}" >
+            <view:CalculatorView />
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewModel:LoadoutViewModel}" >
+            <view:LoadoutView />
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewModel:SettingsViewModel}" >
+            <view:SettingsView />
+        </DataTemplate>
+
+
+
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Views/Styles/ButtonStyles.xaml" />
+                <ResourceDictionary Source="Views/Styles/CalculatorRunButtonStyle.xaml" />
+                <ResourceDictionary Source="Views/Styles/CalculatorResetButtonStyle.xaml" />
+                <ResourceDictionary Source="Views/Styles/CalculatorTextBoxStyle.xaml" />
+                <ResourceDictionary Source="Views/Styles/ComboBoxStyle.xaml" />
                 <ResourceDictionary Source="Views/Styles/TextBoxStyles.xaml" />
+                <ResourceDictionary Source="Views/Styles/WindowBorderMinMaxButtonStyle.xaml" />
+                <ResourceDictionary Source="Views/Styles/WindowBorderExitButtonStyle.xaml" />
+                <ResourceDictionary Source="Views/Styles/NavigationPaneButtonStyle.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

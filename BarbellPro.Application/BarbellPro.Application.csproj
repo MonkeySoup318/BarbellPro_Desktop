@@ -9,8 +9,31 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\AppIcon_2.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="Resources\Images.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\AppIcon_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images.xaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.77" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Resources\ImageProperties.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

@@ -6,17 +6,30 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Markup;
 using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace BarbellPro.Application.Models.Services
 {
+    /// <summary>
+    /// Handles the image import and property management
+    /// </summary>
     public class ImageManagerService : JsonParserService
-    {     
-        private readonly string _imagePath = "C:\\Users\\ingam\\source\\repos\\BarbellPro\\BarbellPro.Application\\Resources\\Images.xaml";
+    {
         private readonly Dictionary<Images, ImageSource> imageSource = new();
 
-        public void LoadImages()
+        public static ImageSource LoadAppIconImage()
         {
-            string xamlContent = File.ReadAllText(_imagePath);
+            var appIconImage = new BitmapImage();
+            appIconImage.BeginInit();
+            appIconImage.UriSource = new Uri(FilePathManagerModel.AppIconImagePath, UriKind.RelativeOrAbsolute);
+            appIconImage.EndInit();
+
+            return appIconImage;
+        }
+
+        public void LoadBumberPlateImages()
+        {
+            string xamlContent = File.ReadAllText(FilePathManagerModel.CalculatorImagesPath);
             ResourceDictionary resourceDictionary = (ResourceDictionary)XamlReader.Parse(xamlContent);
             imageSource.Add(Images._25kg, (DrawingImage)resourceDictionary["_25kg_rot_finiDrawingImage"]);
             imageSource.Add(Images._20kg, (DrawingImage)resourceDictionary["_20kg_blau_finiDrawingImage"]);
@@ -32,18 +45,18 @@ namespace BarbellPro.Application.Models.Services
             imageSource.Add(Images._barbell, (DrawingImage)resourceDictionary["leerestange_finiDrawingImage"]);
         }
 
-        public Image GetImage(Images key)
+        public Image GetImageFromDictionary(Images key)
         {
             Image image = new()
             {
                 Source = imageSource[key]
             };
-            SetImageProperties(image, key);
+            SetBumperPlateImageProperties(image, key);
 
             return image;
         }
 
-        private void SetImageProperties(Image image, Images key)
+        private void SetBumperPlateImageProperties(Image image, Images key)
         {
             var imageProperty = ParseImageProperties()?.GetValueOrDefault(key);
 
