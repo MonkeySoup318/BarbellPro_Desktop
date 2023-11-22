@@ -1,0 +1,211 @@
+﻿<Window
+    x:Class="BarbellPro.Application.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="clr-namespace:BarbellPro.Application.ViewModels"
+    Width="1050"
+    Height="700"
+    AllowsTransparency="True"
+    ResizeMode="CanResizeWithGrip"
+    SizeChanged="Window_SizeChanged"
+    WindowStyle="None"
+    mc:Ignorable="d">
+
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="0" />
+    </WindowChrome.WindowChrome>
+
+    <Window.DataContext>
+        <viewModels:MainWindowViewModel />
+    </Window.DataContext>
+
+    <!--  Main Grid  -->
+    <Grid Background="#303030">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="10" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="10" />
+        </Grid.RowDefinitions>
+
+        <!--  Header  -->
+        <Border
+            Grid.ColumnSpan="3"
+            Background="#353535"
+            MouseDown="Border_MouseDown">
+            <Grid HorizontalAlignment="Stretch">
+                <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
+                    <!--  App Icon  -->
+                    <Image Margin="10,5,0,5" Source="{Binding AppIconImage}" />
+                    <!--  App Label  -->
+                    <Label
+                        VerticalAlignment="Center"
+                        Content="Weight Plate Calculator"
+                        FontWeight="SemiBold"
+                        Foreground="#FFF9F9F9" />
+                </StackPanel>
+
+                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                    <!--  Minimize Button  -->
+                    <Button
+                        Width="45"
+                        Height="35"
+                        Background="Transparent"
+                        BorderThickness="0"
+                        Click="Button_Click_Minimize"
+                        Content="⚊"
+                        FontWeight="Bold"
+                        Foreground="#FFF9F9F9"
+                        Style="{DynamicResource WindowBorderMinMaxButtonStyle}" />
+                    <!--  Maximize Button  -->
+                    <Button
+                        Width="45"
+                        Height="35"
+                        VerticalAlignment="Center"
+                        Background="Transparent"
+                        BorderThickness="0"
+                        Click="Button_Click_Maximize"
+                        Content="☐"
+                        FontWeight="Bold"
+                        Foreground="#FFF9F9F9"
+                        Style="{DynamicResource WindowBorderMinMaxButtonStyle}" />
+                    <!--  Close Button  -->
+                    <Button
+                        Width="45"
+                        Height="35"
+                        Margin="0,0,0,0"
+                        Background="Transparent"
+                        BorderThickness="0"
+                        Click="Button_Click_Close"
+                        Content="☓"
+                        FontWeight="Bold"
+                        Foreground="#FFF9F9F9"
+                        Style="{DynamicResource WindowBorderExitButtonStyle}" />
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <!--  Menu Panel  -->
+        <StackPanel
+            Grid.Row="1"
+            Grid.Column="1"
+            Grid.ColumnSpan="2"
+            Margin="0,0,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Orientation="Horizontal">
+
+            <!--  CalculatorView Button  -->
+            <Button
+                Width="100"
+                Height="20"
+                Command="{Binding NavigateToCalculatorViewCommand}"
+                Content="Σ Calculator"
+                Style="{DynamicResource NavigationPaneButtonStyle}" />
+
+            <!--  LoadoutView Button  -->
+            <Button
+                Width="100"
+                Height="20"
+                Command="{Binding NavigateToLoadoutViewCommand}"
+                Content="≡ Loadout"
+                Style="{DynamicResource NavigationPaneButtonStyle}" />
+
+            <!--  SettingsView Button  -->
+            <Button
+                Width="100"
+                Height="20"
+                Command="{Binding NavigateToSettingsViewCommand}"
+                Content="⛭ Settings"
+                Style="{DynamicResource NavigationPaneButtonStyle}" />
+
+            <!--  SwitchTheme Button  -->
+            <Button
+                Width="100"
+                Height="20"
+                Content="◑ Theme"
+                Style="{DynamicResource NavigationPaneButtonStyle}" />
+
+            <!--  Activate Debug Info Button  -->
+            <Button
+                Width="100"
+                Height="20"
+                Content="Debug View"
+                Style="{DynamicResource NavigationPaneButtonStyle}" />
+
+            <!--  HelpView Button  -->
+            <Button
+                Width="100"
+                Height="20"
+                Content="Help"
+                Style="{DynamicResource NavigationPaneButtonStyle}" />
+        </StackPanel>
+
+        <Grid Grid.Row="2" Grid.Column="1">
+            <ContentControl
+                x:Name="Pages"
+                Grid.Row="2"
+                Grid.Column="1"
+                Content="{Binding CurrentView}" />
+
+            <!--  DebugInfo  -->
+            <!--<TextBlock
+                Grid.Row="7"
+                Grid.Column="0"
+                Text="SelectedGender: " />
+            <TextBlock
+                Grid.Row="8"
+                Grid.Column="0"
+                Text="InputWeight: " />
+            <TextBlock
+                Grid.Row="9"
+                Grid.Column="0"
+                Text="HasClip: " />
+            <TextBlock
+                Grid.Row="10"
+                Grid.Column="0"
+                Text="MinWeight: " />
+            <TextBlock
+                Grid.Row="11"
+                Grid.Column="0"
+                Text="MaxWeight: " />
+            <TextBlock
+                Grid.Row="12"
+                Grid.Column="0"
+                Text="AlgoWeight: " />
+
+            <TextBlock
+                Grid.Row="7"
+                Grid.Column="1"
+                Text="{Binding SelectedGender}" />
+            <TextBlock
+                Grid.Row="8"
+                Grid.Column="1"
+                Text="{Binding InputWeight}" />
+            <TextBlock
+                Grid.Row="9"
+                Grid.Column="1"
+                Text="{Binding HasClip}" />
+            <TextBlock
+                Grid.Row="10"
+                Grid.Column="1"
+                Text="{Binding MinWeight, StringFormat={}{0:N1}}" />
+            <TextBlock
+                Grid.Row="11"
+                Grid.Column="1"
+                Text="{Binding MaxWeight, StringFormat={}{0:N1}}" />
+            <TextBlock
+                Grid.Row="12"
+                Grid.Column="1"
+                Text="{Binding AlgoWeight, StringFormat={}{0:N1}}" />-->
+
+        </Grid>
+    </Grid>
+</Window>

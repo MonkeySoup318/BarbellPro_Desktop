@@ -5,8 +5,9 @@ namespace BarbellPro.Application.Models
 {
     public static class FilePathManagerModel
     {
+        // ToDo: make this an Interface and call it in here as a service
         public static string CalculatorImagesPath => GetPath("Images.xaml");
-        public static string AppIconImagePath => GetPath("AppIcon_2.png");
+        public static string AppIconImagePath => GetPath("AppIcon.png");
         public static string ImagePropertiesPath => GetPath("ImageProperties.json");
 
         private static string GetPath(string fileName)

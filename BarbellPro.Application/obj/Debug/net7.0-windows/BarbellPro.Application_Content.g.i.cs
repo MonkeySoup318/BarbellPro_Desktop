@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/appicon_2.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/appicon.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/images.xaml")]
 
 

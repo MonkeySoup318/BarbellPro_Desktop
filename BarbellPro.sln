@@ -5,7 +5,7 @@ VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BarbellPro.Application", "BarbellPro.Application\BarbellPro.Application.csproj", "{1918F493-4884-4B1B-966F-D56933D972FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarbellPro.Tests", "BarbellPro.Tests\BarbellPro.Tests.csproj", "{1894B0B6-DCFE-4BE7-A1FF-9DD1973671A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BarbellPro.Tests", "BarbellPro.Tests\BarbellPro.Tests.csproj", "{1894B0B6-DCFE-4BE7-A1FF-9DD1973671A1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

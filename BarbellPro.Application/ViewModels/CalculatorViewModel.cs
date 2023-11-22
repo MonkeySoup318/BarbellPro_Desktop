@@ -1,6 +1,7 @@
 ﻿using BarbellPro.Application.Models;
 using BarbellPro.Application.Models.Enums;
 using BarbellPro.Application.Models.Services;
+using BarbellPro.Application.Utilities;
 using System;
 using System.Collections.ObjectModel;
 using System.Windows.Controls;
@@ -20,14 +21,6 @@ namespace BarbellPro.Application.ViewModels
 
         public ObservableCollection<CalculationObjectModel> CObject { get; set; }
         private readonly ImageManagerService imageManager;
-
-        // Property for AppIcon Image
-        private ImageSource appIconImage;
-        public ImageSource AppIconImage
-        {
-            get { return appIconImage; }
-            private set { appIconImage = value; }
-        }
 
         // Property for the Barbell Image
         private ImageSource emptyBarbellImage;
@@ -186,7 +179,6 @@ namespace BarbellPro.Application.ViewModels
             imageManager = new ImageManagerService();
             imageManager.LoadBumberPlateImages();  
             
-            appIconImage = ImageManagerService.LoadAppIconImage();
             emptyBarbellImage = imageManager.GetImageFromDictionary(Images._barbell).Source;
 
             Array.Copy(weightPlates, originalWeightPlates, weightPlates.Length);

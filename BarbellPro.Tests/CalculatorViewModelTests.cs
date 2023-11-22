@@ -1,6 +1,4 @@
 ﻿using Xunit;
-using BarbellPro.Application;
-using BarbellPro.Application.ViewModels;
 
 namespace BarbellPro.Tests
 {

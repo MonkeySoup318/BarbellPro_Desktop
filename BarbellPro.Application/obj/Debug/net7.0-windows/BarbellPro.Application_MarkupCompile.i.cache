@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Users\ingam\source\repos\BarbellPro\BarbellPro.Application\App.xaml
-13-412889368
-2-1785869703
-24-1738550516
+13-2080461340
+2-1836381494
+28-1477032344
 200418215871
-Views\CalculatorView.xaml;Views\LoadoutView.xaml;Views\SettingsView.xaml;Views\Styles\CalculatorResetButtonStyle.xaml;Views\Styles\CalculatorRunButtonStyle.xaml;Views\Styles\CalculatorTextBoxStyle.xaml;Views\Styles\ComboBoxStyle.xaml;Views\Styles\NavigationPaneButtonStyle.xaml;Views\Styles\TextBoxStyles.xaml;Views\Styles\WindowBorderExitButtonStyle.xaml;Views\Styles\WindowBorderMinMaxButtonStyle.xaml;Views\Themes\DarkTheme.xaml;Views\Themes\LightTheme.xaml;
+MainWindow.xaml;Styles\CalculatorResetButtonStyle.xaml;Styles\CalculatorRunButtonStyle.xaml;Styles\CalculatorTextBoxStyle.xaml;Styles\ComboBoxStyle.xaml;Styles\NavigationPaneButtonStyle.xaml;Styles\TextBoxStyles.xaml;Styles\WindowBorderExitButtonStyle.xaml;Styles\WindowBorderMinMaxButtonStyle.xaml;Utilities\DataTemplate.xaml;Views\CalculatorView.xaml;Views\LoadoutView.xaml;Views\SettingsView.xaml;
 
 False
 

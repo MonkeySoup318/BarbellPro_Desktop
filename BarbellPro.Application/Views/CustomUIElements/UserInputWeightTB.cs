@@ -12,7 +12,6 @@ namespace BarbellPro.Application.Views.CustomUIElements
         {
             if (!regex.IsMatch(e.Text))
                 e.Handled = true;
-
             base.OnPreviewTextInput(e);
         }
 

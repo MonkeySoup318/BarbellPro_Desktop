@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="MainWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\CalculatorView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -18,6 +21,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Utilities\DataTemplate.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\CalculatorView.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -27,34 +36,28 @@
     <Page Update="Views\SettingsView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Styles\CalculatorResetButtonStyle.xaml">
+    <Page Update="Styles\CalculatorResetButtonStyle.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Styles\CalculatorRunButtonStyle.xaml">
+    <Page Update="Styles\CalculatorRunButtonStyle.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Styles\CalculatorTextBoxStyle.xaml">
+    <Page Update="Styles\CalculatorTextBoxStyle.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Styles\ComboBoxStyle.xaml">
+    <Page Update="Styles\ComboBoxStyle.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Styles\NavigationPaneButtonStyle.xaml">
+    <Page Update="Styles\NavigationPaneButtonStyle.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Styles\TextBoxStyles.xaml">
+    <Page Update="Styles\TextBoxStyles.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Styles\WindowBorderExitButtonStyle.xaml">
+    <Page Update="Styles\WindowBorderExitButtonStyle.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Styles\WindowBorderMinMaxButtonStyle.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Views\Themes\DarkTheme.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Views\Themes\LightTheme.xaml">
+    <Page Update="Styles\WindowBorderMinMaxButtonStyle.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

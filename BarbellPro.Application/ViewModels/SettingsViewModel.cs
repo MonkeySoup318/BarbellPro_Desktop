@@ -1,13 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BarbellPro.Application.Models;
+using BarbellPro.Application.Utilities;
 
 namespace BarbellPro.Application.ViewModels
 {
     public class SettingsViewModel : ViewModelBase
     {
-        public SettingsViewModel() { }
+        private readonly SettingsModel _settingsModel;
+        
+        public string Message
+        {
+            get { return _settingsModel.Status; }
+            set { _settingsModel.Status = value; OnPropertyChanged(); }
+        }
+
+        public SettingsViewModel() 
+        {
+            _settingsModel = new SettingsModel();
+            Message = "Hello Settings";
+        }
     }
 }

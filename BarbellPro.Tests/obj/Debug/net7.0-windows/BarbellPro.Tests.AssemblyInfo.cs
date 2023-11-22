@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BarbellPro.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+35cd8d5847922bdf400df05189c713ffbb650dc6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d6c646722d3c8861e04e875652845f4887b94431")]
 [assembly: System.Reflection.AssemblyProductAttribute("BarbellPro.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BarbellPro.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
