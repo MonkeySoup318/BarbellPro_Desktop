@@ -16,7 +16,7 @@ namespace BarbellPro.Application.ViewModels
         public SettingsViewModel() 
         {
             _settingsModel = new SettingsModel();
-            Message = "Hello Settings";
+            Message = "!!!UNDER CONSTRUCTION!!!";
         }
     }
 }

@@ -8,7 +8,7 @@
     xmlns:local="clr-namespace:BarbellPro.Application.Views"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:viewModels="clr-namespace:BarbellPro.Application.ViewModels"
-    d:DesignHeight="600"
+    d:DesignHeight="700"
     d:DesignWidth="1000"
     mc:Ignorable="d">
 
@@ -17,50 +17,27 @@
         <viewModels:SettingsViewModel />
     </UserControl.DataContext>
 
-    <!--  Main Grid  -->
+    <!-- Main Grid -->
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <!--  Inner Grid left side  -->
+        <!-- Inner Grid left side -->
         <Border
-            Grid.Row="2"
-            Grid.Column="0"
-            Margin="20,10,10,10"
             Background="#444444"
             BorderThickness="1"
             CornerRadius="8">
 
             <TextBlock
-                Grid.Row="2"
-                Grid.Column="0"
                 Margin="10,10,0,10"
                 FontSize="16"
                 FontWeight="Bold"
                 Foreground="#ffffff"
-                Text="{Binding Message}" />
-        </Border>
-        <Border
-            Grid.Row="2"
-            Grid.Column="1"
-            Margin="10,10,20,10"
-            Background="#444444"
-            BorderThickness="1"
-            CornerRadius="8">
-
-            <TextBlock
-                Grid.Row="2"
-                Grid.Column="0"
-                Margin="10,10,0,10"
-                FontSize="16"
-                FontWeight="Bold"
-                Foreground="#ffffff"
-                Text="{Binding Message}" />
+                Text="!!!UNDER CONSTRUCTION!!!" />
         </Border>
     </Grid>
 </UserControl>

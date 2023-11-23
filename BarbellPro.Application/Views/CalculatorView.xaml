@@ -9,8 +9,8 @@
     xmlns:local="clr-namespace:BarbellPro.Application.Views"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:viewModels="clr-namespace:BarbellPro.Application.ViewModels"
-    Width="1000"
-    Height="600"
+    d:DesignWidth="1000"
+    d:DesignHeight="700"
     mc:Ignorable="d">
 
     <UserControl.DataContext>
@@ -31,8 +31,8 @@
     <!--  Main Grid  -->
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2*" />
-            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="70*" />
+            <ColumnDefinition Width="300" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
@@ -40,27 +40,21 @@
 
         <!--  Inner Grid left side  -->
         <Border
-            Grid.Row="2"
             Grid.Column="0"
-            Margin="20,20,10,20"
             Background="#444444"
             BorderThickness="1"
             CornerRadius="8">
             <DockPanel Margin="0,20,0,20">
-                <StackPanel
-                    Width="580"
-                    Height="500"
-                    Orientation="Horizontal">
-                    <Grid Width="580" Height="500">
+                <StackPanel Orientation="Horizontal">
+                    <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="74" />
-                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="75" />
+                            <ColumnDefinition Width="400" />
                         </Grid.ColumnDefinitions>
+                        
                         <!--  Image Empty Barbell  -->
                         <Image
                             Grid.ColumnSpan="2"
-                            Width="580"
-                            Height="280"
                             HorizontalAlignment="Left"
                             Source="{Binding EmptyBarbellImage}"
                             Stretch="None" />
@@ -84,99 +78,96 @@
         </Border>
 
         <!--  Inner Grid right side  -->
-        <Grid Grid.Row="2" Grid.Column="2">
+        <Grid Grid.Column="2">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*" />
-                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="150" />
+                <ColumnDefinition Width="150" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="10" />
-                <RowDefinition Height="auto" />
-                <RowDefinition Height="auto" />
-                <RowDefinition Height="auto" />
-                <RowDefinition Height="auto" />
-                <RowDefinition Height="auto" />
-                <RowDefinition Height="auto" />
-                <RowDefinition Height="auto" />
-                <RowDefinition Height="auto" />
-                <RowDefinition Height="auto" />
-                <RowDefinition Height="auto" />
-                <RowDefinition Height="auto" />
-                <RowDefinition Height="auto" />
-                <RowDefinition Height="1*" />
+                <RowDefinition Height="70" />
+                <RowDefinition Height="70" />
+                <RowDefinition Height="70" />
+                <RowDefinition Height="70" />
+                <RowDefinition Height="70" />
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="10*" />
             </Grid.RowDefinitions>
 
             <Border
-                Grid.Row="1"
-                Grid.RowSpan="9"
+                Grid.Row="0"
+                Grid.RowSpan="5"
                 Grid.Column="0"
                 Grid.ColumnSpan="2"
-                Margin="10,10,20,10"
                 Background="#444444"
                 BorderThickness="1"
                 CornerRadius="8" />
 
             <!--  Gender  -->
             <TextBlock
-                Grid.Row="1"
+                Grid.Row="0"
                 Grid.Column="0"
-                Margin="20,20,0,10"
+                Margin="10,0,0,0"
                 FontSize="16"
                 FontWeight="Bold"
                 Foreground="#ffffff"
+                VerticalAlignment="Center"
                 Text="Select Gender:" />
 
             <ComboBox
                 Name="cbGenderSelect"
-                Grid.Row="1"
+                Grid.Row="0"
                 Grid.Column="1"
-                Margin="10,20,30,10"
+                Margin="0,0,0,0"
                 ItemsSource="{Binding Source={StaticResource getGenderFromEnum}, UpdateSourceTrigger=PropertyChanged}"
                 SelectedValue="{Binding SelectedGender, UpdateSourceTrigger=PropertyChanged}"
                 Style="{DynamicResource ComboBoxStyle1}" />
 
             <!--  Weight  -->
             <TextBlock
-                Grid.Row="2"
+                Grid.Row="1"
                 Grid.Column="0"
-                Margin="20,10,0,10"
+                Margin="10,0,0,0"
                 FontSize="16"
                 FontWeight="Bold"
                 Foreground="#ffffff"
+                VerticalAlignment="Center"
                 Text="Weight (in kg):" />
 
             <cstm:UserInputWeightTB
-                Grid.Row="2"
+                Grid.Row="1"
                 Grid.Column="1"
-                Margin="10,10,30,10"
+                Margin="0,0,0,0"
                 Style="{DynamicResource CalculatorTextBoxStyle}"
                 Text="{Binding InputWeight, UpdateSourceTrigger=PropertyChanged}" />
 
             <!--  Has Tournament Clip  -->
             <TextBlock
-                Grid.Row="3"
+                Grid.Row="2"
                 Grid.Column="0"
-                Margin="20,10,0,10"
+                Margin="10,0,0,0"
                 FontSize="16"
                 FontWeight="Bold"
                 Foreground="#ffffff"
+                VerticalAlignment="Center"
                 Text="Tournament clip:" />
 
             <CheckBox
                 Name="chHasClip"
-                Grid.Row="3"
+                Grid.Row="2"
                 Grid.Column="1"
-                Margin="0,10,35,10"
+                Margin="0,0,15,0"
                 HorizontalAlignment="Right"
+                VerticalAlignment="Center"
                 IsChecked="{Binding HasClip, UpdateSourceTrigger=PropertyChanged}" />
 
             <!--  Calculate Weight Plates  -->
             <Button
                 Name="btnCalculate"
-                Grid.Row="4"
-                Grid.Column="0"
+                Grid.Row="3"
                 Grid.ColumnSpan="2"
-                Margin="30,30,30,5"
                 Command="{Binding CalculateCommand}"
                 Content="Calculate Weight Plates"
                 FontSize="14"
@@ -186,20 +177,17 @@
             <!--  Reset Weights Plates  -->
             <Button
                 Name="btnReset"
-                Grid.Row="5"
-                Grid.Column="0"
+                Grid.Row="4"
                 Grid.ColumnSpan="2"
-                Margin="30,5,30,20"
                 Command="{Binding ResetViewCommand}"
                 Content="Reset"
                 Style="{DynamicResource CalculatorResetButtonStyle}" />
 
             <Border
-                Grid.Row="8"
-                Grid.RowSpan="6"
+                Grid.Row="5"
+                Grid.RowSpan="5"
                 Grid.Column="0"
                 Grid.ColumnSpan="2"
-                Margin="10,10,20,20"
                 Background="#444444"
                 BorderThickness="1"
                 CornerRadius="8" />

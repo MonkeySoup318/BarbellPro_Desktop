@@ -16,5 +16,5 @@ C:\Users\ingam\source\repos\BarbellPro\BarbellPro.Application\App.xaml
 200418215871
 MainWindow.xaml;Styles\CalculatorResetButtonStyle.xaml;Styles\CalculatorRunButtonStyle.xaml;Styles\CalculatorTextBoxStyle.xaml;Styles\ComboBoxStyle.xaml;Styles\NavigationPaneButtonStyle.xaml;Styles\TextBoxStyles.xaml;Styles\WindowBorderExitButtonStyle.xaml;Styles\WindowBorderMinMaxButtonStyle.xaml;Utilities\DataTemplate.xaml;Views\CalculatorView.xaml;Views\LoadoutView.xaml;Views\SettingsView.xaml;
 
-False
+True
 
