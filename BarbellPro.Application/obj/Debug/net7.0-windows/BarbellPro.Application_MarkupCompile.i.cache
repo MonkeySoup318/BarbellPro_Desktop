@@ -12,7 +12,7 @@ TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Users\ingam\source\repos\BarbellPro\BarbellPro.Application\App.xaml
 13-2080461340
 2-1836381494
-28-1477032344
+27-1861583670
 200418215871
 MainWindow.xaml;Styles\CalculatorResetButtonStyle.xaml;Styles\CalculatorRunButtonStyle.xaml;Styles\CalculatorTextBoxStyle.xaml;Styles\ComboBoxStyle.xaml;Styles\NavigationPaneButtonStyle.xaml;Styles\TextBoxStyles.xaml;Styles\WindowBorderExitButtonStyle.xaml;Styles\WindowBorderMinMaxButtonStyle.xaml;Utilities\DataTemplate.xaml;Views\CalculatorView.xaml;Views\LoadoutView.xaml;Views\SettingsView.xaml;
 

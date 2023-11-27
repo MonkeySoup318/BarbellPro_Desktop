@@ -9,8 +9,8 @@
     xmlns:local="clr-namespace:BarbellPro.Application.Views"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:viewModels="clr-namespace:BarbellPro.Application.ViewModels"
-    d:DesignWidth="1000"
     d:DesignHeight="700"
+    d:DesignWidth="1000"
     mc:Ignorable="d">
 
     <UserControl.DataContext>
@@ -51,7 +51,7 @@
                             <ColumnDefinition Width="75" />
                             <ColumnDefinition Width="400" />
                         </Grid.ColumnDefinitions>
-                        
+
                         <!--  Image Empty Barbell  -->
                         <Image
                             Grid.ColumnSpan="2"
@@ -110,10 +110,10 @@
                 Grid.Row="0"
                 Grid.Column="0"
                 Margin="10,0,0,0"
+                VerticalAlignment="Center"
                 FontSize="16"
                 FontWeight="Bold"
                 Foreground="#ffffff"
-                VerticalAlignment="Center"
                 Text="Select Gender:" />
 
             <ComboBox
@@ -130,10 +130,10 @@
                 Grid.Row="1"
                 Grid.Column="0"
                 Margin="10,0,0,0"
+                VerticalAlignment="Center"
                 FontSize="16"
                 FontWeight="Bold"
                 Foreground="#ffffff"
-                VerticalAlignment="Center"
                 Text="Weight (in kg):" />
 
             <cstm:UserInputWeightTB
@@ -148,10 +148,10 @@
                 Grid.Row="2"
                 Grid.Column="0"
                 Margin="10,0,0,0"
+                VerticalAlignment="Center"
                 FontSize="16"
                 FontWeight="Bold"
                 Foreground="#ffffff"
-                VerticalAlignment="Center"
                 Text="Tournament clip:" />
 
             <CheckBox

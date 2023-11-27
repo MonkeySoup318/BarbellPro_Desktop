@@ -1,5 +1,6 @@
 ﻿using BarbellPro.Application.Models;
 using BarbellPro.Application.Utilities;
+using System;
 
 namespace BarbellPro.Application.ViewModels
 {
@@ -7,10 +8,10 @@ namespace BarbellPro.Application.ViewModels
     {
         private readonly SettingsModel _settingsModel;
         
-        public string Message
+        public string? Message
         {
-            get { return _settingsModel.Status; }
-            set { _settingsModel.Status = value; OnPropertyChanged(); }
+            get { return _settingsModel.SettingPlaceholderText; }
+            set { _settingsModel.SettingPlaceholderText = value; OnPropertyChanged(); }
         }
 
         public SettingsViewModel() 

@@ -2,6 +2,6 @@
 {
     public class SettingsModel
     {
-        public string? Status { get; set; }
+        public string? SettingPlaceholderText { get; set; }
     }
 }

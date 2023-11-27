@@ -12,6 +12,7 @@ C:\Users\ingam\source\repos\BarbellPro\BarbellPro.Tests\bin\Debug\net7.0-windows
 C:\Users\ingam\source\repos\BarbellPro\BarbellPro.Tests\bin\Debug\net7.0-windows\xunit.runner.visualstudio.dotnetcore.testadapter.dll
 C:\Users\ingam\source\repos\BarbellPro\BarbellPro.Tests\bin\Debug\net7.0-windows\xunit.runner.reporters.netcoreapp10.dll
 C:\Users\ingam\source\repos\BarbellPro\BarbellPro.Tests\bin\Debug\net7.0-windows\xunit.runner.utility.netcoreapp10.dll
+C:\Users\ingam\source\repos\BarbellPro\BarbellPro.Tests\bin\Debug\net7.0-windows\Resources\AppIcon.png
 C:\Users\ingam\source\repos\BarbellPro\BarbellPro.Tests\bin\Debug\net7.0-windows\Resources\Images.xaml
 C:\Users\ingam\source\repos\BarbellPro\BarbellPro.Tests\bin\Debug\net7.0-windows\Resources\ImageProperties.json
 C:\Users\ingam\source\repos\BarbellPro\BarbellPro.Tests\bin\Debug\net7.0-windows\BarbellPro.Tests.deps.json
@@ -106,4 +107,3 @@ C:\Users\ingam\source\repos\BarbellPro\BarbellPro.Tests\obj\Debug\net7.0-windows
 C:\Users\ingam\source\repos\BarbellPro\BarbellPro.Tests\obj\Debug\net7.0-windows\BarbellPro.Tests.pdb
 C:\Users\ingam\source\repos\BarbellPro\BarbellPro.Tests\obj\Debug\net7.0-windows\BarbellPro.Tests.genruntimeconfig.cache
 C:\Users\ingam\source\repos\BarbellPro\BarbellPro.Tests\obj\Debug\net7.0-windows\ref\BarbellPro.Tests.dll
-C:\Users\ingam\source\repos\BarbellPro\BarbellPro.Tests\bin\Debug\net7.0-windows\Resources\AppIcon.png

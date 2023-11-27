@@ -12,18 +12,28 @@ namespace BarbellPro.Application.ViewModels
 {
     public class CalculatorViewModel : ViewModelBase
     {
-        // Constants
         private const int BarWeightMale = 20;
         private const int BarWeightFemale = 15;
         private const int Clipped = 5;
         private const int Unclipped = 0;
-        private const double MaxWeightDefault = 300.0;
-
-        public ObservableCollection<CalculationObjectModel> CObject { get; set; }
+        private const double MaxWeight = 300.0;
+       
         private readonly ImageManagerService imageManager;
+        private readonly double[] originalWeightPlates = new double[10];
+        private ImageSource emptyBarbellImage;
+        private Gender selectedGender;
+        private int inputWeight;
+        private bool hasClip;
+        private bool resetView;
+        private double minWeight;
+        private double maxWeight;
+        private double algoWeight;        
+        private double[] weightPlates = new double[10];
+        private ObservableCollection<Image> imageCollection = new();
+
+        public ObservableCollection<CalculatorModel>? CObject { get; set; }
 
         // Property for the Barbell Image
-        private ImageSource emptyBarbellImage;
         public ImageSource EmptyBarbellImage
         {
             get { return emptyBarbellImage; }
@@ -31,7 +41,6 @@ namespace BarbellPro.Application.ViewModels
         }
 
         // Properties for user input
-        private Gender selectedGender;
         public Gender SelectedGender
         {
             get { return selectedGender; }
@@ -44,8 +53,7 @@ namespace BarbellPro.Application.ViewModels
                 }               
             }
         }
-
-        private int inputWeight;
+      
         public int InputWeight
         {
             get { return inputWeight; }
@@ -58,8 +66,7 @@ namespace BarbellPro.Application.ViewModels
                 }               
             }
         }
-
-        private bool hasClip;
+      
         public bool HasClip
         {
             get { return hasClip; }
@@ -72,8 +79,7 @@ namespace BarbellPro.Application.ViewModels
                 }             
             }
         }
-
-        private bool resetView;
+       
         public bool ResetView
         {
             get { return resetView; }
@@ -87,8 +93,7 @@ namespace BarbellPro.Application.ViewModels
             }
         }
 
-        // Fields for calculations
-        private double minWeight;
+        // Fields for calculations       
         public double MinWeight
         {
             get { return minWeight; }
@@ -101,22 +106,7 @@ namespace BarbellPro.Application.ViewModels
                 }
             }
         }
-
-        private double maxWeight;
-        public double MaxWeight
-        {
-            get { return maxWeight; }
-            set
-            {
-                if (maxWeight != value)
-                {
-                    maxWeight = value;
-                    OnPropertyChanged(nameof(maxWeight));
-                }
-            }
-        }
-
-        private double algoWeight;
+             
         public double AlgoWeight
         {
             get { return algoWeight; }
@@ -130,10 +120,7 @@ namespace BarbellPro.Application.ViewModels
             }
         }
 
-        // Fields for View display
-        private readonly double[] originalWeightPlates = new double[10];
-
-        private double[] weightPlates = new double[10];
+        // Fields for View display               
         public double[] WeightPlates
         {
             get { return weightPlates; }
@@ -147,8 +134,7 @@ namespace BarbellPro.Application.ViewModels
             }
         }
 
-        // Field to hold my images for the stackpanel in the View
-        private ObservableCollection<Image> imageCollection = new();
+        // Field to hold my images for the stackpanel in the View       
         public ObservableCollection<Image> ImageCollection
         {
             get { return imageCollection; }
@@ -166,9 +152,9 @@ namespace BarbellPro.Application.ViewModels
         public CalculatorViewModel()
         {
             // Default Data
-            CObject = new ObservableCollection<CalculationObjectModel>
+            CObject = new ObservableCollection<CalculatorModel>
             {
-                new CalculationObjectModel
+                new CalculatorModel
                 {
                     Gender = Gender.Male,
                     Weight = 0,
@@ -197,11 +183,6 @@ namespace BarbellPro.Application.ViewModels
             };
         }
 
-        public void SetMaxWeight()
-        {
-            MaxWeight = MaxWeightDefault;
-        }
-
         public void SetAlgoWeight()
         {
             double _algoWeight = (InputWeight - MinWeight) / 2;
@@ -215,7 +196,6 @@ namespace BarbellPro.Application.ViewModels
         public bool CanExecuteCalculate(object obj)
         {
             SetMinWeight();
-            SetMaxWeight();
             SetAlgoWeight();
 
             return ((AlgoWeight > 0.0) && (InputWeight <= MaxWeight));
@@ -245,7 +225,7 @@ namespace BarbellPro.Application.ViewModels
         {
             Images[] weightPlateKeys =
             {
-                Images._25kg,
+                Images._25kg, 
                 Images._20kg,
                 Images._15kg,
                 Images._10kg,
